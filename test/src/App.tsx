@@ -1,27 +1,35 @@
 import { useEffect } from 'react'
-import './App.css'
+import s from './App.module.css'
 
 import { makeAutoObservable } from "mobx"
 import { observer } from "mobx-react-lite"
-
+interface TimerViewProps {
+  timer: {
+    secondsPassed: string;
+    reset: () => void;
+  };
+}
 function createTimer() {
   return makeAutoObservable({
-    secondsPassed: 0,
+    secondsPassed: "",
     increase() {
-      this.secondsPassed += 1
+      this.secondsPassed += "кря "
     },
     reset() {
-      this.secondsPassed = 0
+      this.secondsPassed = ''
     }
   })
 }
 
 const myTimer = createTimer()
-const TimerView = observer(({ timer }) => (
-  <button onClick={() => timer.reset()}
-    className="px-4 py-2 bg-indigo-500 text-white rounded">
-    Seconds passed: {timer.secondsPassed}</button>
-))
+const TimerView: React.FC<TimerViewProps> = observer(({ timer }) => (
+  <button 
+    onClick={() => timer.reset()}
+    className="px-4 py-2 bg-indigo-500 text-white rounded"
+  >
+    Seconds passed: {timer.secondsPassed}
+  </button>
+));
 
 
 function App() {
@@ -37,7 +45,8 @@ function App() {
   return (
     <>
       <div className='h-screen flex flex-col items-center justify-center'>
-        <p>Я работаю</p>
+        <p>Я работаю с утками</p>
+        <img className='w-64 h-64' src={"/2911269.png"} alt="Описание" />
         <h1 className="text-3xl font-bold underline">
           Hello world!
         </h1>
