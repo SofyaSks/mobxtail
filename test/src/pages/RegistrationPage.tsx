@@ -5,27 +5,18 @@ export function RegistrationPage() {
 
     return (
         <div className="registration-page-container 
-            flex flex-col items-center justify-center
-            h-screen">
-            <div className="grid grid-cols-2 ">
-                <div>
-                    <label htmlFor='login'> Вход </label>
-                    <input name='log-reg-radio' type="radio" id='login' checked={mode === 'login'} onChange={() => { setMode('login') }}
-                        className='appearance-none' />
-                </div>
-
-                <div>
-                    <label htmlFor='registration'> Регистрация </label>
-                    <input name='log-reg-radio' type="radio" id='registration' checked={mode === 'registration'} onChange={() => { setMode('registration') }}
-                        className='appearance-none' />
-                </div>
+           flex flex-col items-center justify-center
+            h-screen ">
+            <div className="grid grid-cols-2 h-15 w-100  bg-blue-500 ">
+                <button className='border-1 border-black' onClick={()=>{setMode('login')}}>Вход</button>
+                <button className='border-1 border-black' onClick={()=>{setMode('registration')}}>Регистрация</button>
 
             </div>
 
             {mode === 'login' &&
                 <div className=''>
                     <form action="" className="grid grid-cols-[auto_1fr] grid-rows-2  
-                    border-2 border-black rounded-md ">
+                    border-2 border-black rounded-md w-100">
                         <label htmlFor="" className="m-5">Логин:</label>
                         <input type="text" name="" id="" className="border p-1 m-3" />
                         <label htmlFor="" className="m-5">Пароль:</label>
@@ -37,7 +28,7 @@ export function RegistrationPage() {
             {mode === 'registration' &&
                 <div className=''>
                     <form action="" className="grid grid-cols-[auto_1fr] grid-rows-4  
-                    border-2 border-black rounded-md ">
+                    border-2 border-black rounded-md w-100">
                         <label htmlFor="" className="m-5">Логин:</label>
                         <input type="text" name="" id="" className="border p-1 m-3" />
                         <label htmlFor="" className="m-5">Email:</label>
