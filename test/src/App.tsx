@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
-import s from './App.module.css'
-
 import { makeAutoObservable } from "mobx"
 import { observer } from "mobx-react-lite"
+import { RegistrationPage } from './pages/RegistrationPage';
 interface TimerViewProps {
   timer: {
     secondsPassed: string;
@@ -23,7 +22,7 @@ function createTimer() {
 
 const myTimer = createTimer()
 const TimerView: React.FC<TimerViewProps> = observer(({ timer }) => (
-  <button 
+  <button
     onClick={() => timer.reset()}
     className="px-4 py-2 bg-indigo-500 text-white rounded"
   >
@@ -44,7 +43,7 @@ function App() {
 
   return (
     <>
-      <div className='h-screen flex flex-col items-center justify-center'>
+      {/* <div className='h-screen flex flex-col items-center justify-center'>
         <p>Я работаю с утками</p>
         <img className='w-64 h-64' src={"/2911269.png"} alt="Описание" />
         <h1 className="text-3xl font-bold underline">
@@ -53,7 +52,12 @@ function App() {
         <div className='mt-5'>
           <TimerView timer={myTimer} />
         </div>
-      </div>
+      </div> */}
+
+
+      <RegistrationPage />
+
+
 
     </>
   )
