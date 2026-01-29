@@ -6,43 +6,42 @@ export function RegistrationPage() {
     return (
         <div className="registration-page-container 
            flex flex-col items-center justify-center
-            h-screen ">
-            <div className="grid grid-cols-2 h-15 w-100  bg-blue-500 ">
-                <button className='border-1 border-black' onClick={()=>{setMode('login')}}>Вход</button>
-                <button className='border-1 border-black' onClick={()=>{setMode('registration')}}>Регистрация</button>
+            h-screen">
+            <div className='border-3 border-[#6c5ce7] rounded-md'>
+                <div className="grid grid-cols-2 h-15 w-100  ">
+                    <button className='bg-[#6c5ce7] text-white hover:bg-[#8274ed] transition  duration-500 ease-in-out' onClick={() => { setMode('login') }}>Вход</button>
+                    <button className='bg-[#6c5ce7]  text-white hover:bg-[#8274ed] transition  duration-300 ease-in-out' onClick={() => { setMode('registration') }}>Регистрация</button>
 
+                </div>
+
+                {mode === 'login' &&
+                    <div className=''>
+                        <form action="" className="flex flex-col w-100 h-80">
+                            <input type="text" placeholder='Логин' name="" id="" className="border-2 border-[#6c5ce7] rounded-md p-1 m-3 h-10" />
+                            <input type="password" placeholder='Пароль' name="" id="" className="border-2 border-[#6c5ce7] rounded-md p-1 m-3 h-10" />
+                            <button type='submit'
+                                className='h-13 mt-2 w-50 self-center 
+                                border-2 border-[#6c5ce7] rounded-md bg-[#6c5ce7] hover:bg-[#8274ed] text-white transition  duration-500 ease-in-out'>Войти</button>
+                        </form>
+                    </div>
+                }
+
+                {mode === 'registration' &&
+                    <div className=''>
+                        <form action="" className="flex flex-col w-100 h-85">
+                            <input type="text" placeholder='Логин' name="" id="" className="border-2 border-[#6c5ce7] rounded-md p-1 m-3 h-10" />
+                            <input type="email" placeholder='Почта' name="" id="" className="border-2 border-[#6c5ce7] rounded-md p-1 m-3 h-10" />
+                            <input type="password" placeholder='Пароль' name="" id="" className="border-2 border-[#6c5ce7] rounded-md p-1 m-3 h-10" />
+                            <input type="password" placeholder='Повторите пароль' name="" id="" className="border-2 border-[#6c5ce7] rounded-md p-1 m-3 h-10" />
+                            <button type='submit'
+                                className='h-13 mt-2 w-50 self-center 
+                                border-2 border-[#6c5ce7] rounded-md bg-[#6c5ce7] hover:bg-[#8274ed] text-white transition  duration-500 ease-in-out'>
+                                    Зарегистрироваться
+                            </button>
+                        </form>
+                    </div>
+                }
             </div>
-
-            {mode === 'login' &&
-                <div className=''>
-                    <form action="" className="grid grid-cols-[auto_1fr] grid-rows-2  
-                    border-2 border-black rounded-md w-100">
-                        <label htmlFor="" className="m-5">Логин:</label>
-                        <input type="text" name="" id="" className="border p-1 m-3" />
-                        <label htmlFor="" className="m-5">Пароль:</label>
-                        <input type="password" name="" id="" className="border p-1 m-3" />
-                    </form>
-                </div>
-            }
-
-            {mode === 'registration' &&
-                <div className=''>
-                    <form action="" className="grid grid-cols-[auto_1fr] grid-rows-4  
-                    border-2 border-black rounded-md w-100">
-                        <label htmlFor="" className="m-5">Логин:</label>
-                        <input type="text" name="" id="" className="border p-1 m-3" />
-                        <label htmlFor="" className="m-5">Email:</label>
-                        <input type="email" name="" id="" className="border p-1 m-3" />
-                        <label htmlFor="" className="m-5">Пароль:</label>
-                        <input type="password" name="" id="" className="border p-1 m-3" />
-                        <label htmlFor="" className="m-5">Пароль повторно:</label>
-                        <input type="password" name="" id="" className="border p-1 m-3" />
-                    </form>
-                </div>
-            }
-
-
-
         </div>
     )
 }
