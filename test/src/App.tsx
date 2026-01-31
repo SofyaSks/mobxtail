@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { makeAutoObservable } from "mobx"
 import { observer } from "mobx-react-lite"
-import { RegistrationPage } from './pages/RegistrationPage';
+import { AuthPage } from './pages/AuthPage';
 interface TimerViewProps {
   timer: {
     secondsPassed: string;
@@ -55,7 +55,7 @@ function App() {
       </div> */}
 
 
-      <RegistrationPage />
+      <AuthPage />
 
 
 
