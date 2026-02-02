@@ -1,5 +1,5 @@
 
-export function RegistartionPage() {
+export function RegistartionForm() {
     return (
         <div className=''>
             <form action="" className="flex flex-col w-100 h-90">

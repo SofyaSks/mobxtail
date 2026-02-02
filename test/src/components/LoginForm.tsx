@@ -1,6 +1,6 @@
 
 
-export function LoginPage() {
+export function LoginForm() {
     return (
         <div className=' '>
             <form action="" className="flex flex-col w-100 h-80">
