@@ -1,7 +1,7 @@
 
 
 
-export function LoginForm({passwordVisibility, setPasswordVisibility}) {
+export function LoginForm({ passwordVisibility, setPasswordVisibility }) {
     return (
         <div className=' '>
             <form action="" className="flex flex-col w-100 h-100">
@@ -13,10 +13,13 @@ export function LoginForm({passwordVisibility, setPasswordVisibility}) {
                     className="border-2 border-[#6c5ce7] rounded-xl 
                             p-1 m-3 h-12
                             focus:outline-none focus:ring-1 focus:ring-[#6c5ce7]" />
-                <label htmlFor="" className="self-end mr-5"> Показать пароль
-                    <input type="checkbox" className="ml-2 " onChange={(e) => {
-                        setPasswordVisibility(e.target.checked)
-                    }} />
+                <label htmlFor="" className="self-end mr-5 flex"> Показать пароль
+                    <input type="checkbox" className="ml-2 appearance-none border-2 
+                    border-[#6c5ce7] rounded-md w-4 h-4 mt-1.5 
+                    checked:bg-[#6c5ce7] checked:border-0
+                    transition duration-200 ease-in-out" onChange={(e) => {
+                            setPasswordVisibility(e.target.checked)
+                        }} />
                 </label>
                 <button type='submit'
                     className='h-13 mt-2 w-50 self-center 
