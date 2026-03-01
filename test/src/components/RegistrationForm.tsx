@@ -1,5 +1,13 @@
+import { useState } from "react";
 
-export function RegistartionForm({ passwordVisibility, setPasswordVisibility }) {
+export function RegistartionForm() {
+
+    const [passwordVisibility, sPasswordVisibility] = useState<boolean>(false)
+    const setPasswordVisibility = (event: React.ChangeEvent<HTMLInputElement>) => {
+        sPasswordVisibility(event?.target?.checked);
+        console.log(passwordVisibility)
+    }
+
     return (
         <div className=''>
             <form action="" className="flex flex-col w-100 h-100">
@@ -19,9 +27,9 @@ export function RegistartionForm({ passwordVisibility, setPasswordVisibility }) 
                     <input type="checkbox" className="ml-2 appearance-none border-2 
                     border-[#6c5ce7] rounded-md w-4 h-4 mt-1.5 
                     checked:bg-[#6c5ce7] checked:border-0
-                    transition duration-200 ease-in-out" onChange={(e) => {
-                        setPasswordVisibility(e.target.checked)
-                    }} />
+                    transition duration-200 ease-in-out" onChange={
+                            setPasswordVisibility
+                        } />
                 </label>
                 <button type='submit'
                     className='h-13 mt-2 w-50 self-center 

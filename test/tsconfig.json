@@ -6,9 +6,14 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true,
-      "files": [
-    "./src"
-  ]
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": false,
+    "noEmitOnError": true,
+    "noErrorTruncation": true,
+    "pretty": true,
+  //     "files": [
+  //   "./src"
+  // ]
   },
   "include": ["vite.config.ts,src"]
 }

@@ -5,7 +5,8 @@ import { RegistartionForm } from '../components/RegistrationForm'
 export function AuthPage() {
 
 
-    const [passwordVisibility, setPasswordVisibility] = useState(false)
+    // const [passwordVisibility, setPasswordVisibility] = useState<boolean>(false)
+
     const [mode, setMode] = useState<string>('login')
     return (
         <div className="registration-page-container 
@@ -29,12 +30,12 @@ export function AuthPage() {
                 </div>
 
                 {mode === 'login' && <LoginForm
-                    passwordVisibility={passwordVisibility}
-                    setPasswordVisibility={setPasswordVisibility}
+                    // passwordVisibility={passwordVisibility}
+                    // setPasswordVisibility={setPasswordVisibility}
                 />}
                 {mode === 'registration' && <RegistartionForm
-                    passwordVisibility={passwordVisibility}
-                    setPasswordVisibility={setPasswordVisibility}
+                    // passwordVisibility={passwordVisibility}
+                    // setPasswordVisibility={setPasswordVisibility}
                 />}
 
             </div>
