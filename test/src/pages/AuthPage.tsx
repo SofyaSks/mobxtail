@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { LoginForm } from '../components/LoginForm'
 import { RegistartionForm } from '../components/RegistrationForm'
 
-export function AuthPage() {
+export const AuthPage=()=>{
 
 
     // const [passwordVisibility, setPasswordVisibility] = useState<boolean>(false)
@@ -17,7 +17,7 @@ export function AuthPage() {
                 <div className="grid grid-cols-2 h-15 w-full rounded-t-2xl overflow-hidden"> {/* Скругление только сверху */}
                     <button className='bg-[#6c5ce7] text-white hover:bg-[#8274ed] 
                 transition duration-500 ease-in-out
-                hover:cursor-pointer h-full'
+                hover:cursor-pointer h-auto'
                         onClick={() => { setMode('login') }}>
                         Вход
                     </button>
